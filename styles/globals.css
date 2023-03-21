@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .Button1Container {
+    @apply h-full  flex items-end cursor-pointer;
+  }
+
+  .Button1Text {
+    @apply font-rbm font-light text-[14px] tracking-[2px] leading-[20px] uppercase hover:underline underline-offset-2 text-[#999999] cursor-pointer;
+  }
+
+  .h1 {
+    @apply font-pfd text-[34px] leading-[45px] text-black;
+  }
+
+  .h2 {
+    @apply font-rbm text-[14px] font-light tracking-[2px] leading-[20px] uppercase text-[#999999];
+  }
+
+  .Button2Text {
+    @apply font-ocb text-[14px] leading-[20px] text-black;
+  }
+}
