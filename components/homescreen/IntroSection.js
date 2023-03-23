@@ -1,5 +1,5 @@
-import React from "react";
-import ButtonStyle1 from "./ButtonStyle2";
+import { router } from "next/router";
+import ButtonStyle2 from "./ButtonStyle2";
 
 const IntroSection = () => {
   return (
@@ -15,7 +15,12 @@ const IntroSection = () => {
         <p className="h1 text-left">Melbourne Australia.</p>
       </div>
 
-      <ButtonStyle1 label="About me" />
+      <ButtonStyle2
+        label="About me"
+        onClick={() => {
+          router.push("/about");
+        }}
+      />
     </div>
   );
 };

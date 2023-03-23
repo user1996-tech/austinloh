@@ -19,8 +19,16 @@
     @apply font-rbm text-[14px] font-light tracking-[2px] leading-[20px] uppercase text-[#999999];
   }
 
+  .h3 {
+    @apply font-pfd text-[40px] font-bold leading-[44px] text-[#333333];
+  }
+
   .p {
     @apply font-ocl text-[16px] leading-[22px] text-[#333333];
+  }
+
+  .p2 {
+    @apply text-[26px] font-light leading-[40px] text-black font-oss;
   }
 
   .emailLink {
@@ -29,5 +37,9 @@
 
   .Button2Text {
     @apply font-ocb text-[14px] leading-[20px] text-black;
+  }
+
+  body {
+    @apply scrollbar-thin scrollbar-thumb-gray-600;
   }
 }

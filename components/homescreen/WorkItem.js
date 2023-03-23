@@ -1,12 +1,16 @@
 import Image from "next/image";
-import ButtonStyle1 from "./ButtonStyle2";
+import ButtonStyle2 from "./ButtonStyle2";
+import { router } from "next/router";
 
-const WorkItem = ({ techs, label, texts, image }) => {
+const WorkItem = ({ techs, label, url, texts, image }) => {
   return (
     <div className="space-y-5 flex-1 flex flex-col lg:flex-row space-x-0 lg:space-x-10">
       <div
         className={`w-full h-[400px] lg:h-[500px] flex-1 cursor-pointer
         `}
+        onClick={() => {
+          router.push(url);
+        }}
       >
         <Image
           src={image}
@@ -50,7 +54,12 @@ const WorkItem = ({ techs, label, texts, image }) => {
           </div>
         </div>
 
-        <ButtonStyle1 label="See the live website" />
+        <ButtonStyle2
+          label="See the live website"
+          onClick={() => {
+            router.push(url);
+          }}
+        />
       </div>
     </div>
   );

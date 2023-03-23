@@ -1,10 +1,15 @@
 import WorkItem from "./WorkItem";
 import WorkItemReverse from "./WorkItemReverse";
+import { links } from "../../global";
 
-const Recentworks = () => {
+const Recentworks = ({ recentworksRef }) => {
   return (
     // <div className="w-full mx-auto max-w-sm md:max-w-xl lg:max-w-3xl space-y-7 pt-[100px] pb-[0px]">
-    <div className="w-full px-5 md:px-[100px] space-y-7 pt-[100px] ">
+    <div
+      className="w-full px-5 md:px-[100px] space-y-7 pt-[100px] "
+      ref={recentworksRef}
+      id="recentworks"
+    >
       <div className="">
         <p className="h2">Recent Works</p>
       </div>
@@ -13,6 +18,7 @@ const Recentworks = () => {
         <WorkItem
           image="/works/3.png"
           label="Arctic Green Redesign"
+          url={links.extarcticgreen}
           techs={[
             { alt: "Sanity.io", image: "/logos/sanityio.png", url: "" },
             { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
@@ -27,6 +33,7 @@ const Recentworks = () => {
         <WorkItemReverse
           image="/works/1.png"
           label="Battleview"
+          url={links.extbattleview}
           techs={[
             { alt: "Firebase", image: "/logos/firebase.png", url: "" },
             { alt: "React.js", image: "/logos/react.png", url: "" },
@@ -42,6 +49,7 @@ const Recentworks = () => {
         <WorkItem
           image="/works/2.png"
           label="Covid-19 Tracker"
+          url={links.extcovidtracker}
           techs={[
             { alt: "Firebase", image: "/logos/firebase.png", url: "" },
             { alt: "React.js", image: "/logos/react.png", url: "" },

@@ -1,7 +1,12 @@
 import "../styles/globals.css";
-import { Roboto_Mono, Playfair_Display } from "next/font/google";
+import { Roboto_Mono, Playfair_Display, Open_Sans } from "next/font/google";
 import Opensans_CondensedBold from "next/font/local";
 import Opensans_CondensedLight from "next/font/local";
+
+const open_sans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-oss",
+});
 
 const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
@@ -26,7 +31,7 @@ const opensans_condensedlight = Opensans_CondensedLight({
 function MyApp({ Component, pageProps }) {
   return (
     <main
-      className={`${roboto_mono.variable} ${playfair_display.variable} ${opensans_condensedbold.variable} ${opensans_condensedlight.variable}`}
+      className={`${roboto_mono.variable} ${playfair_display.variable} ${opensans_condensedbold.variable} ${opensans_condensedlight.variable} ${open_sans.variable}`}
     >
       <Component {...pageProps} />
     </main>

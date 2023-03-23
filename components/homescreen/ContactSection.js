@@ -1,20 +1,26 @@
 import { useState } from "react";
+import { router } from "next/router";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { links } from "../../global";
 
-const ContactSection = () => {
+const ContactSection = ({ contactRef }) => {
   const travelDistance = 200;
   const [travel, setTravel] = useState(travelDistance);
 
   return (
-    <div className="w-full px-5 md:px-[100px] space-y-7 pt-[100px] pb-[70px]">
+    <div
+      className="w-full px-5 md:px-[100px] space-y-7 pt-[100px] pb-[70px]"
+      ref={contactRef}
+      id="contact"
+    >
       <div className="">
         <p className="h2">Contact</p>
       </div>
 
       <div className="space-y-2">
         <div
-          className="cursor-pointer inline-block relative overflow-hidden"
+          className="inline-block relative overflow-hidden"
           onMouseEnter={() => {
             setTravel(0);
           }}
@@ -37,7 +43,12 @@ const ContactSection = () => {
 
         <p className="p">+(61) 432685451</p>
 
-        <div className="h-[40px] w-[40px] cursor-pointer">
+        <div
+          className="h-[40px] w-[40px] cursor-pointer pt-3"
+          onClick={() => {
+            router.push(links.extlinkedin);
+          }}
+        >
           <Image
             src="/linkedin.png"
             height={100}

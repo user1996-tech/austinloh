@@ -13,8 +13,9 @@ module.exports = {
         pfd: ["var(--font-pfd)", ...fontFamily.sans],
         ocb: ["var(--font-ocb)", ...fontFamily.sans],
         ocl: ["var(--font-ocl)", ...fontFamily.sans],
+        oss: ["var(--font-oss)", ...fontFamily.sans],
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
