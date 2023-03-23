@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Script from "next/script";
 import { Roboto_Mono, Playfair_Display, Open_Sans } from "next/font/google";
 import Opensans_CondensedBold from "next/font/local";
 import Opensans_CondensedLight from "next/font/local";
@@ -30,11 +31,27 @@ const opensans_condensedlight = Opensans_CondensedLight({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main
-      className={`${roboto_mono.variable} ${playfair_display.variable} ${opensans_condensedbold.variable} ${opensans_condensedlight.variable} ${open_sans.variable}`}
-    >
-      <Component {...pageProps} />
-    </main>
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      />
+      <Script strategy="afterInteractive">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+  `}
+      </Script>
+
+      <main
+        className={`${roboto_mono.variable} ${playfair_display.variable} ${opensans_condensedbold.variable} ${opensans_condensedlight.variable} ${open_sans.variable}`}
+      >
+        <Component {...pageProps} />
+      </main>
+    </>
   );
 }
 
