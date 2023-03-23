@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ButtonStyle2 from "./ButtonStyle2";
-import { router } from "next/router";
+import TechnologiesItem from "./TechonologiesItem";
 
 const WorkItem = ({ techs, label, url, texts, image }) => {
   return (
@@ -9,7 +9,7 @@ const WorkItem = ({ techs, label, url, texts, image }) => {
         className={`w-full h-[400px] lg:h-[500px] flex-1 cursor-pointer
         `}
         onClick={() => {
-          router.push(url);
+          window.open(url, "_blank");
         }}
       >
         <Image
@@ -35,31 +35,19 @@ const WorkItem = ({ techs, label, url, texts, image }) => {
           <p className="p">Tech stack used:</p>
           <div className="flex flex-row space-x-5">
             {techs.map((tech, index) => {
-              return (
-                <div
-                  key={index}
-                  className="flex justify-center items-center cursor-pointer
-            "
-                >
-                  <Image
-                    src={tech.image}
-                    className="h-10 w-10 object-contain"
-                    alt={tech.alt}
-                    height={200}
-                    width={200}
-                  />
-                </div>
-              );
+              return <TechnologiesItem key={index} tech={tech} />;
             })}
           </div>
         </div>
 
-        <ButtonStyle2
-          label="See the live website"
-          onClick={() => {
-            router.push(url);
-          }}
-        />
+        <div className="pt-3">
+          <ButtonStyle2
+            label="See the live website"
+            onClick={() => {
+              window.open(url, "_blank");
+            }}
+          />
+        </div>
       </div>
     </div>
   );

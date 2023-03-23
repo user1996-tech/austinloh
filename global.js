@@ -8,14 +8,32 @@ const links = {
 };
 
 const technologies = [
-  { alt: "Sanity.io", image: "/logos/sanityio.png", url: "" },
-  { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
-  { alt: "React.js", image: "/logos/react.png", url: "" },
-  // { alt: "React Native", image: "/logos/reactnative.png", url: "" },
-  // { alt: "Firebase", image: "/logos/firebase.png", url: "" },
-  // { alt: "Github", image: "/logos/github.png", url: "" },
-  // { alt: "PHP", image: "/logos/php.png", url: "" },
-  // { alt: "MySql", image: "/logos/mysql.png", url: "" },
+  {
+    alt: "Sanity.io",
+    image: "/logos/sanityio.png",
+    url: "https://www.sanity.io/",
+  },
+  { alt: "Next.js", image: "/logos/nextjs.png", url: "https://nextjs.org/" },
+  { alt: "React.js", image: "/logos/react.png", url: "https://react.dev/" },
+  {
+    alt: "React Native",
+    image: "/logos/reactnative.png",
+    url: "https://reactnative.dev/",
+  },
+  { alt: "Node.js", image: "/logos/nodejs2.png", url: "https://nodejs.org/en" },
+  {
+    alt: "tailwindcss",
+    image: "/logos/tailwindcss2.png",
+    url: "https://tailwindcss.com/",
+  },
+  {
+    alt: "Firebase",
+    image: "/logos/firebase.png",
+    url: "https://firebase.google.com/",
+  },
+  { alt: "Github", image: "/logos/github.png", url: "https://github.com/" },
+  { alt: "PHP", image: "/logos/php.png", url: "https://www.php.net/" },
+  { alt: "MySql", image: "/logos/mysql.png", url: "https://www.mysql.com/" },
 ];
 
 export { links, technologies };
