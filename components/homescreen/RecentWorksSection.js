@@ -23,6 +23,21 @@ const Recentworks = ({ recentworksRef }) => {
             { alt: "Sanity.io", image: "/logos/sanityio.png", url: "" },
             { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
             { alt: "React.js", image: "/logos/react.png", url: "" },
+            {
+              alt: "Node.js",
+              image: "/logos/nodejs2.png",
+              url: "https://nodejs.org/en",
+            },
+            {
+              alt: "tailwindcss",
+              image: "/logos/tailwindcss2.png",
+              url: "https://tailwindcss.com/",
+            },
+            {
+              alt: "Firebase",
+              image: "/logos/firebase.png",
+              url: "https://firebase.google.com/",
+            },
             { alt: "Github", image: "/logos/github.png", url: "" },
           ]}
           texts={[
@@ -35,8 +50,13 @@ const Recentworks = ({ recentworksRef }) => {
           label="Battleview"
           url={links.extbattleview}
           techs={[
-            { alt: "Firebase", image: "/logos/firebase.png", url: "" },
             { alt: "React.js", image: "/logos/react.png", url: "" },
+            { alt: "Firebase", image: "/logos/firebase.png", url: "" },
+            {
+              alt: "Node.js",
+              image: "/logos/nodejs2.png",
+              url: "https://nodejs.org/en",
+            },
             { alt: "Github", image: "/logos/github.png", url: "" },
           ]}
           texts={[

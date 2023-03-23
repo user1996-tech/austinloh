@@ -12,10 +12,27 @@ const TechnologiesSection = ({ technologiesRef }) => {
         <p className="h2">Technologies</p>
       </div>
 
-      <div className="flex flex-row space-x-5">
+      <div className="hidden md:flex flex-row space-x-5">
         {technologies.map((tech, index) => {
           return <TechonologiesItem key={index} tech={tech} />;
         })}
+      </div>
+
+      <div className="space-y-3">
+        <div className="flex md:hidden flex-row space-x-5">
+          {technologies.map((tech, index) => {
+            return (
+              <>{index <= 4 && <TechonologiesItem key={index} tech={tech} />}</>
+            );
+          })}
+        </div>
+        <div className="flex md:hidden flex-row space-x-5">
+          {technologies.map((tech, index) => {
+            return (
+              <>{index >= 5 && <TechonologiesItem key={index} tech={tech} />}</>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
