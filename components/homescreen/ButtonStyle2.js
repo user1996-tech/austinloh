@@ -3,7 +3,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 const ButtonStyle1 = ({ label, onClick }) => {
-  const travelDistance = 100;
+  const travelDistance = 150;
   const [travel, setTravel] = useState(travelDistance);
   return (
     <div
