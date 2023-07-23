@@ -16,7 +16,7 @@ const Recentworks = ({ recentworksRef }) => {
 
       <div className="space-y-[100px] ">
         <WorkItemReverse
-          image="/works/4.png"
+          image="/works/5.png"
           label="MMA Gym Website Redesign"
           url={links.extc88}
           techs={[
