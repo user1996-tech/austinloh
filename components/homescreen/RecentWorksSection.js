@@ -64,7 +64,7 @@ const Recentworks = ({ recentworksRef }) => {
           ]}
         />
 
-        <WorkItemReverse
+        {/* <WorkItemReverse
           image="/works/1.png"
           label="Battleview"
           url={links.extbattleview}
@@ -83,9 +83,9 @@ const Recentworks = ({ recentworksRef }) => {
             "Able to filter by game, gun class, damage output, this allows users to choose the perfect weapon that suits their play style. Attachments can also be added to weapons in different combinations, to reveal their true stats.",
             "Modelled with Webflow, built with React, hosted on Firebase, stored on Firestore and tracked with Github.",
           ]}
-        />
+        /> */}
 
-        <WorkItem
+        {/* <WorkItem
           image="/works/2.png"
           label="Covid-19 Tracker"
           url={links.extcovidtracker}
@@ -98,7 +98,7 @@ const Recentworks = ({ recentworksRef }) => {
             "Track current COVID-19 cases worldwide and in every country. Based on real-time data from Diesease.sh, view live, recovered and closed cases around the world.",
             "Modelled with Figma, built with React, hosted on Firebase and tracked with Git.",
           ]}
-        />
+        /> */}
       </div>
     </div>
   );
