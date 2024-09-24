@@ -15,6 +15,15 @@ export default function Home() {
     <div>
       <Head>
         <title>Austin Loh</title>
+        <meta name="title" property="og:title" content="Testing og:title" />
+        <meta property="og:type" content="Testing og:type" />
+        <meta name="image" property="og:image" content="/linkedin.png" />
+        <meta
+          name="description"
+          property="og:description"
+          content="Testing og:description"
+        />
+        <meta name="author" content="Testing og:author" />
       </Head>
 
       <div className="min-h-screen relative">
