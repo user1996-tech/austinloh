@@ -14,24 +14,35 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Austin Loh - meta 2</title>
-        <meta name="title" property="og:title" content="Testing og:title" />
+        <title>Austin Loh - meta 3</title>
+        <meta
+          name="title"
+          property="og:title"
+          content="Testing og:title"
+          key="title"
+        />
       </Head>
       <Head>
-        <meta property="og:type" content="Testing og:type" />
+        <meta property="og:type" content="Testing og:type" key="type" />
       </Head>
       <Head>
-        <meta name="image" property="og:image" content="/linkedin.png" />
+        <meta
+          name="image"
+          property="og:image"
+          content="/linkedin.png"
+          key="image"
+        />
       </Head>
       <Head>
         <meta
           name="description"
           property="og:description"
           content="Testing og:description"
+          key="description"
         />
       </Head>
       <Head>
-        <meta name="author" content="Testing og:author" />
+        <meta name="author" content="Testing og:author" key="author" />
       </Head>
 
       <div className="min-h-screen relative">
