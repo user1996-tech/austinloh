@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Austin Loh</title>
+        <title>Austin Loh - meta</title>
         <meta name="title" property="og:title" content="Testing og:title" />
         <meta property="og:type" content="Testing og:type" />
         <meta name="image" property="og:image" content="/linkedin.png" />
