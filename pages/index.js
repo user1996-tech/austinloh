@@ -14,25 +14,20 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Austin Loh - meta 3</title>
+        <title>Austin Loh</title>
       </Head>
       <Head>
-        <meta name="title" property="og:title" content="Testing og:title hh" />
-        <meta property="og:type" content="" />
-        <meta name="image" property="og:image" content="/linkedin.png" />
+        <meta name="title" property="og:title" content="Austin Loh" />
+        <meta name="image" property="og:image" content="/austin-loh.png" />
         <meta
           name="description"
           property="og:description"
-          content="Testing og:description"
+          content="Hi, I'm Austin, a Software Engineer based out of Melbourne Australia."
         />
-        <meta name="author" content="Testing author" />
+        <meta property="og:url" content="/" />
 
-        {/* <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="austinloh.com" />
-        <meta property="twitter:url" content="austinloh.com" />
-        <meta name="twitter:title" content="Testing og:title hh" />
-        <meta name="twitter:description" content="Testing og:description" />
-        <meta name="twitter:image" content="/linkedin.png" /> */}
+        <meta property="og:type" content="Article" />
+        <meta name="author" content="Austin Loh" />
       </Head>
 
       <div className="min-h-screen relative">

@@ -15,6 +15,19 @@ const about = () => {
       <Head>
         <title>About</title>
       </Head>
+      <Head>
+        <meta name="title" property="og:title" content="Austin Loh - About" />
+        <meta name="image" property="og:image" content="/austin-loh.png" />
+        <meta
+          name="description"
+          property="og:description"
+          content="Hi, I'm Austin, a Software Engineer based out of Melbourne Australia."
+        />
+        <meta property="og:url" content="/about" />
+
+        <meta property="og:type" content="Article" />
+        <meta name="author" content="Austin Loh" />
+      </Head>
 
       <div className="min-h-screen">
         <div className="h-full w-full min-h-screen flex flex-col">
