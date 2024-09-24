@@ -16,6 +16,36 @@ export default function Home() {
       <Head>
         <title>Austin Loh - meta 3</title>
       </Head>
+      <Head>
+        <meta
+          name="title"
+          property="og:title"
+          content="Testing og:title"
+          key="title"
+        />
+      </Head>
+      <Head>
+        <meta property="og:type" content="Testing og:type" key="type" />
+      </Head>
+      <Head>
+        <meta
+          name="image"
+          property="og:image"
+          content="/linkedin.png"
+          key="image"
+        />
+      </Head>
+      <Head>
+        <meta
+          name="description"
+          property="og:description"
+          content="Testing og:description"
+          key="description"
+        />
+      </Head>
+      <Head>
+        <meta name="author" content="Testing og:author" key="author" />
+      </Head>
 
       <div className="min-h-screen relative">
         <div className="bg-white absolute h-full w-[30%] left-0 z-[-10]" />

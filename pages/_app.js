@@ -45,36 +45,6 @@ function MyApp({ Component, pageProps }) {
   gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
   `}
       </Script>
-      <Head>
-        <meta
-          name="title"
-          property="og:title"
-          content="Testing og:title"
-          key="title"
-        />
-      </Head>
-      <Head>
-        <meta property="og:type" content="Testing og:type" key="type" />
-      </Head>
-      <Head>
-        <meta
-          name="image"
-          property="og:image"
-          content="/linkedin.png"
-          key="image"
-        />
-      </Head>
-      <Head>
-        <meta
-          name="description"
-          property="og:description"
-          content="Testing og:description"
-          key="description"
-        />
-      </Head>
-      <Head>
-        <meta name="author" content="Testing og:author" key="author" />
-      </Head>
 
       <main
         className={`${roboto_mono.variable} ${playfair_display.variable} ${opensans_condensedbold.variable} ${opensans_condensedlight.variable} ${open_sans.variable}`}
