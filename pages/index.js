@@ -17,19 +17,22 @@ export default function Home() {
         <title>Austin Loh - meta 3</title>
       </Head>
       <Head>
-        <meta name="description" content="Testing og:description" />
+        <meta name="title" property="og:title" content="Testing og:title hh" />
+        <meta property="og:type" content="" />
+        <meta name="image" property="og:image" content="/linkedin.png" />
+        <meta
+          name="description"
+          property="og:description"
+          content="Testing og:description"
+        />
+        <meta name="author" content="Testing author" />
 
-        <meta property="og:url" content="austinloh.com" />
-        <meta property="og:title" content="Testing og:title hh" />
-        <meta property="og:description" content="Testing og:description" />
-        <meta property="og:image" content="/linkedin.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="austinloh.com" />
         <meta property="twitter:url" content="austinloh.com" />
         <meta name="twitter:title" content="Testing og:title hh" />
         <meta name="twitter:description" content="Testing og:description" />
-        <meta name="twitter:image" content="/linkedin.png" />
+        <meta name="twitter:image" content="/linkedin.png" /> */}
       </Head>
 
       <div className="min-h-screen relative">
