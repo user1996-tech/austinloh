@@ -2,7 +2,7 @@ import { useState } from "react";
 import { router } from "next/router";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { links } from "../../global";
+import { links, personalDetails } from "../../global";
 
 const ContactSection = ({ contactRef }) => {
   const travelDistance = 200;
@@ -37,11 +37,11 @@ const ContactSection = ({ contactRef }) => {
             className="absolute bg-[#ECFF01] w-full h-full z-[-10]"
           />
           <div>
-            <p className="emailLink">austinloh042@gmail.com</p>
+            <p className="emailLink">{personalDetails.email}</p>
           </div>
         </div>
 
-        <p className="p">+(61) 432685451</p>
+        <p className="p">{personalDetails.phoneNumber}</p>
 
         <div
           className="h-[40px] w-[40px] cursor-pointer pt-3"

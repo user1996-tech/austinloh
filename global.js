@@ -1,3 +1,8 @@
+export const personalDetails = {
+  email: "austinloh042@gmail.com",
+  phoneNumber: "(+354) 8830064",
+};
+
 const links = {
   home: "/",
   about: "/about",

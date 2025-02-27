@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/homescreen/Header";
-import { links } from "../global";
+import { links, personalDetails } from "../global";
 import { router } from "next/router";
 
 const about = () => {
@@ -14,19 +14,20 @@ const about = () => {
     <div className="">
       <Head>
         <title>About</title>
-      </Head>
-      <Head>
-        <meta name="title" property="og:title" content="Austin Loh - About" />
-        <meta name="image" property="og:image" content="/austin-loh.png" />
+        <meta property="og:title" content="Austin Loh - About" key="title" />
+        <meta property="og:image" content="/austin-loh.png" key="image" />
         <meta
-          name="description"
           property="og:description"
-          content="Hi, I'm Austin, a Software Engineer based out of Melbourne Australia."
+          content="I'm an electrical and software engineer based out of Reykjavik
+                  Iceland. My experience ranges from UI/UX design to Full Stack
+                  Development for both mobile and the web. As a software developer I am possionate about code that brings
+                  interesting ideas to life. I believe in nailing the bigger
+                  picture first, understanding intent and motive first, and then
+                  only doubling down on the details."
+          key="description"
         />
-        <meta property="og:url" content="/about" />
-
-        <meta property="og:type" content="Article" />
-        <meta name="author" content="Austin Loh" />
+        <meta property="og:url" content="https://austinloh.com" key="url" />
+        <meta property="og:type" content="website" key="type" />
       </Head>
 
       <div className="min-h-screen">
@@ -89,12 +90,11 @@ const about = () => {
                     className="absolute bg-[#ECFF01] w-full h-full z-[-10]"
                   />
                   <div>
-                    <p className="emailLink">austinloh042@gmail.com</p>
+                    <p className="emailLink">{personalDetails.email}</p>
                   </div>
                 </div>
 
-                {/* <p className="p">+(61) 432685451</p> */}
-                <p className="p">+(354) 8830064</p>
+                <p className="p">{personalDetails.phoneNumber}</p>
 
                 <div
                   className="h-[40px] w-[40px] cursor-pointer pt-3"

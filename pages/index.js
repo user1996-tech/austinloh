@@ -15,19 +15,20 @@ export default function Home() {
     <div>
       <Head>
         <title>Austin Loh</title>
-      </Head>
-      <Head>
-        <meta name="title" property="og:title" content="Austin Loh" />
-        <meta name="image" property="og:image" content="/austin-loh.png" />
+        <meta property="og:title" content="Austin Loh" key="title" />
+        <meta property="og:image" content="/austin-loh.png" key="image" />
         <meta
-          name="description"
           property="og:description"
-          content="Hi, I'm Austin, a Software Engineer based out of Melbourne Australia."
+          content="I'm an electrical and software engineer based out of Reykjavik
+                  Iceland. My experience ranges from UI/UX design to Full Stack
+                  Development for both mobile and the web. As a software developer I am possionate about code that brings
+                  interesting ideas to life. I believe in nailing the bigger
+                  picture first, understanding intent and motive first, and then
+                  only doubling down on the details."
+          key="description"
         />
-        <meta property="og:url" content="/" />
-
-        <meta property="og:type" content="Article" />
-        <meta name="author" content="Austin Loh" />
+        <meta property="og:url" content="https://austinloh.com" key="url" />
+        <meta property="og:type" content="website" key="type" />
       </Head>
 
       <div className="min-h-screen relative">
