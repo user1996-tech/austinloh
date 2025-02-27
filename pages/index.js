@@ -31,6 +31,25 @@ export default function Home() {
         <meta property="og:type" content="website" key="type" />
         <meta property="og:site_name" content="https://austinloh.com"></meta>
         <meta property="twitter:card" content="summary_large_image"></meta>
+        <meta property="twitter:image" content="/og.jpg"></meta>
+        <meta
+          property="description"
+          content="I'm an electrical and software engineer based out of Reykjavik
+                  Iceland. My experience ranges from UI/UX design to Full Stack
+                  Development for both mobile and the web. As a software developer I am possionate about code that brings
+                  interesting ideas to life. I believe in nailing the bigger
+                  picture first, understanding intent and motive first, and then
+                  only doubling down on the details."
+        />
+        <meta
+          property="twitter:description"
+          content="I'm an electrical and software engineer based out of Reykjavik
+                  Iceland. My experience ranges from UI/UX design to Full Stack
+                  Development for both mobile and the web. As a software developer I am possionate about code that brings
+                  interesting ideas to life. I believe in nailing the bigger
+                  picture first, understanding intent and motive first, and then
+                  only doubling down on the details."
+        ></meta>
       </Head>
 
       <div className="min-h-screen relative">
