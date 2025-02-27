@@ -15,7 +15,7 @@ const about = () => {
       <Head>
         <title>About</title>
         <meta property="og:title" content="Austin Loh - About" key="title" />
-        <meta property="og:image" content="/austin-loh.png" key="image" />
+        <meta property="og:image" content="/og.jpg" key="image" />
         <meta
           property="og:description"
           content="I'm an electrical and software engineer based out of Reykjavik

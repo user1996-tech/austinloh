@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Austin Loh</title>
         <meta property="og:title" content="Austin Loh" key="title" />
-        <meta property="og:image" content="/austin-loh.png" key="image" />
+        <meta property="og:image" content="/og.jpg" key="image" />
         <meta
           property="og:description"
           content="I'm an electrical and software engineer based out of Reykjavik
@@ -29,6 +29,8 @@ export default function Home() {
         />
         <meta property="og:url" content="https://austinloh.com" key="url" />
         <meta property="og:type" content="website" key="type" />
+        <meta property="og:site_name" content="https://austinloh.com"></meta>
+        <meta property="twitter:card" content="summary_large_image"></meta>
       </Head>
 
       <div className="min-h-screen relative">
