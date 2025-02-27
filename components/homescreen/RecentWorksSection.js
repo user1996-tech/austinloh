@@ -16,25 +16,6 @@ const Recentworks = ({ recentworksRef }) => {
 
       <div className="space-y-[100px] ">
         <WorkItemReverse
-          image="/works/5.png"
-          label="MMA Gym Website Redesign"
-          url={links.extc88}
-          techs={[
-            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
-            { alt: "React.js", image: "/logos/react.png", url: "" },
-            {
-              alt: "tailwindcss",
-              image: "/logos/tailwindcss2.png",
-              url: "https://tailwindcss.com/",
-            },
-            { alt: "Github", image: "/logos/github.png", url: "" },
-          ]}
-          texts={[
-            "Expanding from an existing design our focus was to improve the Mobile experience for our customers where most of our online traffic was coming from. Our main focus was to accurately represent the world class standards of our gym with our online presence.",
-          ]}
-        />
-
-        <WorkItem
           image="/works/3.png"
           label="Arctic Green Redesign"
           url={links.extarcticgreen}
@@ -61,6 +42,25 @@ const Recentworks = ({ recentworksRef }) => {
           ]}
           texts={[
             "Redesign of Arctic Green Energy's company website. Featuring an improved design, a mobile first apporach, blazing fast loading times, analytics and content management system.",
+          ]}
+        />
+
+        <WorkItem
+          image="/works/5.png"
+          label="MMA Gym Website Redesign"
+          url={links.extc88}
+          techs={[
+            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
+            { alt: "React.js", image: "/logos/react.png", url: "" },
+            {
+              alt: "tailwindcss",
+              image: "/logos/tailwindcss2.png",
+              url: "https://tailwindcss.com/",
+            },
+            { alt: "Github", image: "/logos/github.png", url: "" },
+          ]}
+          texts={[
+            "Expanding from an existing design our focus was to improve the Mobile experience for our customers where most of our online traffic was coming from. Our main focus was to accurately represent the world class standards of our gym with our online presence.",
           ]}
         />
 

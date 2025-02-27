@@ -3,7 +3,8 @@ const links = {
   about: "/about",
   extlinkedin: "https://www.linkedin.com/in/austin-loh/",
   extc88: "https://c88-fawn.vercel.app/",
-  extarcticgreen: "https://arcticgreen.vercel.app/",
+  // extarcticgreen: "https://arcticgreen.vercel.app/",
+  extarcticgreen: "https://arcticgreen.com/",
   extbattleview: "https://battlefiew-90dd7.web.app/",
   extcovidtracker: "https://example5-a90c6.web.app/",
 };

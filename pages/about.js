@@ -46,9 +46,9 @@ const about = () => {
 
               <div className="space-y-5">
                 <p className="p2">
-                  I'm an electrical and software engineer based out of Melbourne
-                  Australia. My experience ranges from UI/UX design to Full
-                  Stack Development for both mobile and the web.
+                  I'm an electrical and software engineer based out of Reykjavik
+                  Iceland. My experience ranges from UI/UX design to Full Stack
+                  Development for both mobile and the web.
                 </p>
                 <p className="p2">
                   As a software developer I am possionate about code that brings
@@ -58,7 +58,8 @@ const about = () => {
                 </p>
                 <p className="p2">
                   You can find me in the water catching waves, dodging surfers
-                  along the coast or tapping out white belts in the gym.
+                  along the coast or tapping out white belts in the gym outside
+                  of work hours.
                 </p>
               </div>
             </div>
@@ -92,7 +93,8 @@ const about = () => {
                   </div>
                 </div>
 
-                <p className="p">+(61) 432685451</p>
+                {/* <p className="p">+(61) 432685451</p> */}
+                <p className="p">+(354) 8830064</p>
 
                 <div
                   className="h-[40px] w-[40px] cursor-pointer pt-3"

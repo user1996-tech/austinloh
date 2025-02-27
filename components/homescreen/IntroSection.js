@@ -12,7 +12,8 @@ const IntroSection = () => {
         <p className="h1 text-left">
           Hi, I'm Austin, a Software Engineer based out of
         </p>
-        <p className="h1 text-left">Melbourne Australia.</p>
+        {/* <p className="h1 text-left">Melbourne Australia.</p> */}
+        <p className="h1 text-left">Reykjavik Iceland</p>
       </div>
 
       <ButtonStyle2

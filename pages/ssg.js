@@ -17,7 +17,8 @@ export const getStaticProps = async () => {
 function ssg({ metaDetails }) {
   return (
     <>
-      <Head>
+      {/* details */}
+      {/* <Head>
         <meta name="title" property="og:title" content={metaDetails.title} />
         <meta name="image" property="og:image" content={metaDetails.image} />
         <meta
@@ -28,6 +29,18 @@ function ssg({ metaDetails }) {
         <meta property="og:url" content={metaDetails.url} />
 
         <meta property="og:type" content={metaDetails.type} />
+        <meta name="author" content="Austin Loh" />
+      </Head> */}
+      <Head>
+        <meta property="og:title" content="Austin Loh" />
+        <meta property="og:image" content="/austin-loh.png" />
+        <meta
+          property="og:description"
+          content="Hi, I'm Austin, a Software Engineer based out of Melbourne Australia."
+        />
+        <meta property="og:url" content="/" />
+
+        <meta property="og:type" content="Article" />
         <meta name="author" content="Austin Loh" />
       </Head>
       <div className="w-full h-screen flex justify-center items-center">
