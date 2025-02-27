@@ -41,6 +41,7 @@ export default function Home() {
                   picture first, understanding intent and motive first, and then
                   only doubling down on the details."
         />
+        <meta property="twitter:title" content="Austin Loh" />
         <meta
           property="twitter:description"
           content="I'm an electrical and software engineer based out of Reykjavik
