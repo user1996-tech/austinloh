@@ -11,7 +11,8 @@ const links = {
   // extarcticgreen: "https://arcticgreen.vercel.app/",
   extarcticgreen: "https://arcticgreen.com/",
   extbattleview: "https://battlefiew-90dd7.web.app/",
-  extcovidtracker: "https://example5-a90c6.web.app/",
+  extsassapp: "https://sass-app-cyan.vercel.app/",
+  extaidocumentsass: "https://ai-document-saas.vercel.app/",
 };
 
 const technologies = [

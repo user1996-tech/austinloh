@@ -64,6 +64,63 @@ const Recentworks = ({ recentworksRef }) => {
           ]}
         />
 
+        <WorkItemReverse
+          image="/works/6.png"
+          label="Chat With Anyone App"
+          url={links.extsassapp}
+          techs={[
+            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
+            {
+              alt: "Stripe",
+              image: "/logos/stripe.png",
+              url: "https://stripe.com",
+            },
+            {
+              alt: "tailwindcss",
+              image: "/logos/tailwindcss2.png",
+              url: "https://tailwindcss.com/",
+            },
+            {
+              alt: "Firebase",
+              image: "/logos/firebase.png",
+              url: "https://firebase.google.com/",
+            },
+            { alt: "Github", image: "/logos/github.png", url: "" },
+          ]}
+          texts={[
+            " Multilingual messaging platform breaking down language barriers by letting users chat naturally in their native tongue while AI translation seamlessly converts messages to each recipient's preferred language. This innovative solution enables truly global communication without language limitations, allowing diverse teams and international friends to connect effortlessly in real-time.",
+          ]}
+        />
+
+        <WorkItem
+          image="/works/7.png"
+          label="PDF Document Analyzer app"
+          url={links.extaidocumentsass}
+          techs={[
+            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
+            { alt: "React.js", image: "/logos/react.png", url: "" },
+            {
+              alt: "tailwindcss",
+              image: "/logos/tailwindcss2.png",
+              url: "https://tailwindcss.com/",
+            },
+            { alt: "Github", image: "/logos/github.png", url: "" },
+            {
+              alt: "Pinecone",
+              image: "/logos/pinecone.png",
+              url: "https://www.pinecone.io/",
+            },
+            {
+              alt: "LangChain",
+              image: "/logos/langchain.png",
+              url: "https://www.langchain.com/",
+            },
+          ]}
+          texts={[
+            "Web application transforms document interaction by allowing users to upload PDFs that are instantly analyzed by AI, creating an interactive experience where users can chat directly with their documents. This intelligent solution eliminates the need for manual searching through lengthy files, enabling users to simply ask questions and receive accurate, contextual responses drawn directly from their uploaded content.",
+          ]}
+        />
+
         {/* <WorkItemReverse
           image="/works/1.png"
           label="Battleview"
