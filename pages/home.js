@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProtectedRoute from "../components/ProtectedRoute";
 import Header from "../components/hiddenscreen/Header";
+import { generateRegion } from "../global";
+import moment from "moment-timezone";
 
-const areaOptions = ["Home", "Projects"];
+const areaOptions = ["Home", "About", "Projects"];
 const timeOptions = ["All time", "Last month", "Last half year", "Last year"];
 
 const SelectedOptions = ({ option, selected, setSelected }) => {
@@ -13,7 +15,6 @@ const SelectedOptions = ({ option, selected, setSelected }) => {
         active ? "bg-blue-200" : ""
       }`}
       onClick={() => {
-        console.log(option, " -> clicked");
         setSelected(option);
       }}
     >
@@ -27,6 +28,28 @@ const home = () => {
   const [time, setTime] = useState(timeOptions[0]);
   const [total, setTotal] = useState(64);
   const [loading, setLoading] = useState(true);
+  const [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      setLoading(true);
+      let result = [];
+      const temp = await fetch("/api/getData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ area, time }),
+      });
+
+      result = await temp.json();
+      setTotal(result.length);
+      setRows(result.rows);
+      setLoading(false);
+    };
+
+    getData();
+  }, [area, time]);
 
   return (
     <ProtectedRoute>
@@ -74,6 +97,7 @@ const home = () => {
                 <tr className="tableHeaderRow">
                   <th className="tableHeaderData">No</th>
                   <th className="tableHeaderData">IP address</th>
+                  <th className="tableHeaderData">Project</th>
                   <th className="tableHeaderData">Time and date</th>
                   <th className="tableHeaderData">Region</th>
                 </tr>
@@ -82,34 +106,30 @@ const home = () => {
                 <div className="">Loading ... </div>
               ) : (
                 <tbody className="tableBody">
-                  {/* {rows.map((doc, index) => {
-                    return ( */}
-                  <tr className="tableBodyDataRow" key={index}>
-                    <td className="tableBodyData">{/* {index + 1} */}1</td>
-                    <td className="tableBodyData">
-                      {/* {doc.ip} */}
-                      31.209.218.163
-                    </td>
-                    <td className="tableBodyData">
-                      <p className="hidden md:inline">
-                        {/* {moment(doc.dateTime)
-                              .tz(timezones[selected].timezone)
-                              .format("Do MMM YYYY HH:mm:ss")} */}
-                      </p>
-                      <p className="inline md:hidden">
-                        {/* {moment(doc.dateTime)
-                              .tz(timezones[selected].timezone)
-                              .format("DD/MM/YY HH:mm:ss")} */}
-                        14th Mar 2025 19:54:10
-                      </p>
-                    </td>
-                    <td className="tableBodyData">
-                      {/* {generateRegion(doc.country, doc.city)} */}
-                      Iceland / Reykjavik
-                    </td>
-                  </tr>
-                  {/* );
-                  })} */}
+                  {rows.map((doc, index) => {
+                    return (
+                      <tr className="tableBodyDataRow" key={index}>
+                        <td className="tableBodyData">{index + 1}</td>
+                        <td className="tableBodyData">{doc.ip}</td>
+                        <td className="tableBodyData">{doc.project}</td>
+                        <td className="tableBodyData">
+                          <p className="hidden md:inline">
+                            {moment(doc.dateTime)
+                              .tz("Atlantic/Reykjavik")
+                              .format("Do MMM YYYY HH:mm:ss")}
+                          </p>
+                          <p className="inline md:hidden">
+                            {moment(doc.dateTime)
+                              .tz("Atlantic/Reykjavik")
+                              .format("DD/MM/YY HH:mm:ss")}
+                          </p>
+                        </td>
+                        <td className="tableBodyData">
+                          {generateRegion(doc.country, doc.city)}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               )}
             </table>

@@ -1,3 +1,5 @@
+import countryCodes from "./countryCodes";
+
 export const personalDetails = {
   email: "austinloh042@gmail.com",
   phoneNumber: "(+354) 8830064",
@@ -44,7 +46,7 @@ export const technologies = [
   { alt: "MySql", image: "/logos/mysql.png", url: "https://www.mysql.com/" },
 ];
 
-export const buildCountries = ["United States"];
+export const buildCountries = ["US"];
 
 export const buildRegions = [
   "Santa Clara",
@@ -64,4 +66,27 @@ export const addVisitEntry = async (collection) => {
   })
     .then((res) => res.json())
     .then((data) => {});
+};
+
+export const generateRegion = (country, region) => {
+  let result = "";
+  if (country == "" && region == "") {
+    result = "";
+  } else if (country != "") {
+    if (countryCodes[country]) {
+      result += decodeURI(countryCodes[country]);
+
+      if (region != "") {
+        result += ` / ${decodeURI(region)}`;
+      }
+    } else {
+      result = "";
+    }
+  }
+
+  if (result == "") {
+    return "Unknown";
+  } else {
+    return result;
+  }
 };
