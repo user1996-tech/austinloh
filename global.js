@@ -3,7 +3,7 @@ export const personalDetails = {
   phoneNumber: "(+354) 8830064",
 };
 
-const links = {
+export const links = {
   home: "/",
   about: "/about",
   extlinkedin: "https://www.linkedin.com/in/austin-loh/",
@@ -15,7 +15,7 @@ const links = {
   extaidocumentsass: "https://ai-document-saas.vercel.app/",
 };
 
-const technologies = [
+export const technologies = [
   {
     alt: "Sanity.io",
     image: "/logos/sanityio.png",
@@ -44,4 +44,19 @@ const technologies = [
   { alt: "MySql", image: "/logos/mysql.png", url: "https://www.mysql.com/" },
 ];
 
-export { links, technologies };
+export const buildCountries = ["United States"];
+
+export const buildRegions = ["Santa Clara", "San Jose"];
+
+export const addVisitEntry = async (collection) => {
+  console.log("running addVisitEntry");
+  await fetch("/api/addVisitEntry", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ collection: collection }),
+  })
+    .then((res) => res.json())
+    .then((data) => {});
+};

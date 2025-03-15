@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.6.0",
     "@heroicons/react": "^2.0.18",
+    "firebase": "^11.4.0",
+    "firebase-admin": "^13.2.0",
     "framer-motion": "^10.6.1",
+    "moment-timezone": "^0.5.47",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

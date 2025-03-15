@@ -2,8 +2,9 @@ import Image from "next/image";
 import ButtonStyle2 from "./ButtonStyle2";
 import TechonologiesItem from "./TechonologiesItem";
 import TechnologiesItem from "./TechonologiesItem";
+import { addVisitEntry } from "../../global";
 
-const WorkItemReverse = ({ techs, label, url, texts, image }) => {
+const WorkItemReverse = ({ techs, label, url, texts, image, collection }) => {
   return (
     <div className="space-y-5 flex-1 flex flex-col lg:flex-row space-x-0 lg:space-x-10">
       <div className="space-y-5 flex-1 hidden lg:block">
@@ -29,7 +30,8 @@ const WorkItemReverse = ({ techs, label, url, texts, image }) => {
         <div className="pt-3">
           <ButtonStyle2
             label="See the live website"
-            onClick={() => {
+            onClick={async () => {
+              const result = await addVisitEntry(collection);
               window.open(url, "_blank");
             }}
           />
@@ -39,7 +41,8 @@ const WorkItemReverse = ({ techs, label, url, texts, image }) => {
       <div
         className={`w-full h-[400px] flex-1 cursor-pointer
         `}
-        onClick={() => {
+        onClick={async () => {
+          const result = await addVisitEntry(collection);
           window.open(url, "_blank");
         }}
       >
@@ -88,7 +91,8 @@ const WorkItemReverse = ({ techs, label, url, texts, image }) => {
         <div className="pt-3">
           <ButtonStyle2
             label="See the live website"
-            onClick={() => {
+            onClick={async () => {
+              const result = await addVisitEntry(collection);
               window.open(url, "_blank");
             }}
           />

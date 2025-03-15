@@ -5,6 +5,91 @@ import IntroSection from "../components/homescreen/IntroSection";
 import TechnologiesSection from "../components/homescreen/TechnologiesSection";
 import RecentWorksSection from "../components/homescreen/RecentWorksSection";
 import ContactSection from "../components/homescreen/ContactSection";
+import { buildCountries, buildRegions } from "../global";
+import moment from "moment-timezone";
+import { adminDb } from "../firebase/firebase-admin";
+
+export const getServerSideProps = async ({ req }) => {
+  let data = {};
+  // const dbRef = collection(adminDb, "visitors");
+  // get ip from headers here
+  // const ip = generateRandomIP();
+  const currentTime = moment().utc().format();
+  const currentTimeStamp = Date.now();
+  const mobile = req.headers["user-agent"].match(
+    /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  )
+    ? true
+    : false;
+
+  let platform = "";
+  if (req.headers["user-agent"].match(/Windows/i)) {
+    platform = "Windows";
+  } else if (req.headers["user-agent"].match(/Macintosh/i)) {
+    platform = "Mac";
+  } else if (req.headers["user-agent"].match(/Linux/i)) {
+    platform = "Linux";
+  }
+
+  const country = req?.headers["x-vercel-ip-country"]
+    ? req.headers["x-vercel-ip-country"]
+    : "";
+  const city = req?.headers["x-vercel-ip-city"]
+    ? req.headers["x-vercel-ip-city"]
+    : "";
+  const region = req?.headers["x-vercel-ip-country-region"]
+    ? req.headers["x-vercel-ip-country-region"]
+    : "";
+  const longitude = req?.headers["x-vercel-ip-longitude"]
+    ? req.headers["x-vercel-ip-longitude"]
+    : "";
+  const latitude = req?.headers["x-vercel-ip-latitude"]
+    ? req.headers["x-vercel-ip-latitude"]
+    : "";
+
+  let ip = req.headers["x-real-ip"];
+  if (!ip) {
+    const forwardedFor = req.headers["x-forwarded-for"];
+    if (Array.isArray(forwardedFor)) {
+      ip = forwardedFor.at(0);
+    } else {
+      ip = forwardedFor?.split(",").at(0) ?? "Unknown";
+    }
+  }
+
+  data = {
+    project: "Home",
+    createdAt: currentTimeStamp,
+    ip: ip,
+    dateTime: currentTime,
+    country: country,
+    city: city,
+    region: region,
+    longitude: longitude,
+    latitude: latitude,
+    mobile: mobile,
+    platform: platform,
+  };
+
+  if (req.headers["host"] != "localhost:3000") {
+    if (
+      !(
+        buildCountries.includes(country) &&
+        buildRegions.includes(decodeURI(city))
+      )
+    ) {
+      const res = await adminDb
+        .collection("vistors")
+        .doc("Home")
+        .collection("Visits")
+        .add(data);
+    }
+  }
+
+  return {
+    props: {},
+  };
+};
 
 export default function Home() {
   const technologiesRef = useRef(null);

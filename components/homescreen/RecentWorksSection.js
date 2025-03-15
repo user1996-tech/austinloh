@@ -16,6 +16,7 @@ const Recentworks = ({ recentworksRef }) => {
 
       <div className="space-y-[100px] ">
         <WorkItemReverse
+          collection="Arctic Green"
           image="/works/3.png"
           label="Arctic Green Redesign"
           url={links.extarcticgreen}
@@ -46,6 +47,7 @@ const Recentworks = ({ recentworksRef }) => {
         />
 
         <WorkItem
+          collection="C88"
           image="/works/5.png"
           label="MMA Gym Website Redesign"
           url={links.extc88}
@@ -65,6 +67,7 @@ const Recentworks = ({ recentworksRef }) => {
         />
 
         <WorkItemReverse
+          collection="ChatWithAnyone"
           image="/works/6.png"
           label="Chat With Anyone App"
           url={links.extsassapp}
@@ -93,6 +96,7 @@ const Recentworks = ({ recentworksRef }) => {
         />
 
         <WorkItem
+          collection="DocumentAnalyzer"
           image="/works/7.png"
           label="PDF Document Analyzer app"
           url={links.extaidocumentsass}

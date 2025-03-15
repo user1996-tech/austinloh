@@ -42,4 +42,32 @@
   body {
     @apply scrollbar-thin scrollbar-thumb-gray-600;
   }
+
+  .table {
+    @apply w-full table-auto border-spacing-y-3 border-separate;
+  }
+
+  .tableHeader {
+    @apply text-[15px] md:text-[23px];
+  }
+
+  .tableHeaderRow {
+    @apply text-black;
+  }
+
+  .tableHeaderData {
+    @apply border-b-2 border-black py-2;
+  }
+
+  .tableBody {
+    @apply text-[15px] md:text-[23px] text-[#656565];
+  }
+
+  .tableBodyDataRow {
+    @apply bg-white rounded-md;
+  }
+
+  .tableBodyData {
+    @apply text-center py-2;
+  }
 }
