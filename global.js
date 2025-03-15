@@ -46,7 +46,12 @@ export const technologies = [
 
 export const buildCountries = ["United States"];
 
-export const buildRegions = ["Santa Clara", "San Jose"];
+export const buildRegions = [
+  "Santa Clara",
+  "San Jose",
+  "Santa%20Clara",
+  "Sa%20Jose",
+];
 
 export const addVisitEntry = async (collection) => {
   console.log("running addVisitEntry");

@@ -74,11 +74,7 @@ export default async function handler(req, res) {
       )
     ) {
       // const res = await addDoc(dbRef, data);
-      const res = await adminDb
-        .collection("visitors")
-        .doc("Projects")
-        .collection(collection)
-        .add(data);
+      const res = await adminDb.collection("visitors").add(data);
       result = "entry added";
     }
   }

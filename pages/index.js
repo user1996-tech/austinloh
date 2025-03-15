@@ -78,11 +78,7 @@ export const getServerSideProps = async ({ req }) => {
         buildRegions.includes(decodeURI(city))
       )
     ) {
-      const res = await adminDb
-        .collection("vistors")
-        .doc("Home")
-        .collection("Visits")
-        .add(data);
+      const res = await adminDb.collection("visitors").add(data);
     }
   }
 

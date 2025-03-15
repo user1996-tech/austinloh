@@ -3,8 +3,93 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/homescreen/Header";
-import { links, personalDetails } from "../global";
+import {
+  buildCountries,
+  buildRegions,
+  links,
+  personalDetails,
+} from "../global";
 import { router } from "next/router";
+import moment from "moment-timezone";
+import { adminDb } from "../firebase/firebase-admin";
+
+export const getServerSideProps = async ({ req }) => {
+  let data = {};
+  // const dbRef = collection(adminDb, "visitors");
+  // get ip from headers here
+  // const ip = generateRandomIP();
+  const currentTime = moment().utc().format();
+  const currentTimeStamp = Date.now();
+  const mobile = req.headers["user-agent"].match(
+    /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+  )
+    ? true
+    : false;
+
+  let platform = "";
+  if (req.headers["user-agent"].match(/Windows/i)) {
+    platform = "Windows";
+  } else if (req.headers["user-agent"].match(/Macintosh/i)) {
+    platform = "Mac";
+  } else if (req.headers["user-agent"].match(/Linux/i)) {
+    platform = "Linux";
+  }
+
+  const country = req?.headers["x-vercel-ip-country"]
+    ? req.headers["x-vercel-ip-country"]
+    : "";
+  const city = req?.headers["x-vercel-ip-city"]
+    ? req.headers["x-vercel-ip-city"]
+    : "";
+  const region = req?.headers["x-vercel-ip-country-region"]
+    ? req.headers["x-vercel-ip-country-region"]
+    : "";
+  const longitude = req?.headers["x-vercel-ip-longitude"]
+    ? req.headers["x-vercel-ip-longitude"]
+    : "";
+  const latitude = req?.headers["x-vercel-ip-latitude"]
+    ? req.headers["x-vercel-ip-latitude"]
+    : "";
+
+  let ip = req.headers["x-real-ip"];
+  if (!ip) {
+    const forwardedFor = req.headers["x-forwarded-for"];
+    if (Array.isArray(forwardedFor)) {
+      ip = forwardedFor.at(0);
+    } else {
+      ip = forwardedFor?.split(",").at(0) ?? "Unknown";
+    }
+  }
+
+  data = {
+    project: "About",
+    createdAt: currentTimeStamp,
+    ip: ip,
+    dateTime: currentTime,
+    country: country,
+    city: city,
+    region: region,
+    longitude: longitude,
+    latitude: latitude,
+    mobile: mobile,
+    platform: platform,
+  };
+
+  if (req.headers["host"] != "localhost:3000") {
+    if (
+      !(
+        buildCountries.includes(country) &&
+        buildRegions.includes(decodeURI(city))
+      )
+    ) {
+      const res = await adminDb.collection("visitors").add(data);
+    }
+  }
+
+  return {
+    props: {},
+  };
+};
 
 const about = () => {
   const travelDistance = 200;
