@@ -43,6 +43,7 @@ const home = () => {
       });
 
       result = await temp.json();
+      console.log(result.host);
       setTotal(result.length);
       setRows(result.rows);
       setLoading(false);

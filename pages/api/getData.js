@@ -6,10 +6,10 @@ export default async function handler(req, res) {
   // const referer = req.headers.referer;
 
   const isInternalRequest = host == process.env.BASE_URL;
-  if (!isInternalRequest) {
-    console.log("getData -> NOT INTERNAL REQUEST");
-    return res.status(403).json({ message: "External requests not allowed" });
-  }
+  // if (!isInternalRequest) {
+  // console.log("getData -> NOT INTERNAL REQUEST");
+  // return res.status(403).json({ message: "External requests not allowed" });
+  // }
 
   const area = req.body.area;
   const time = req.body.time;
@@ -52,5 +52,5 @@ export default async function handler(req, res) {
   }
   console.log(temp.docs[0].data());
   console.log("getData -> END");
-  res.status(200).json({ length, rows: result });
+  res.status(200).json({ length, rows: result, host });
 }
