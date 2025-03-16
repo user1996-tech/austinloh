@@ -7,9 +7,9 @@ export default async function handler(req, res) {
   const yearInMs = 12 * 30 * 24 * 60 * 1000;
 
   const isInternalRequest = host == process.env.BASE_URL;
-  if (!isInternalRequest) {
-    return res.status(403).json({ message: "External requests not allowed" });
-  }
+  // if (!isInternalRequest) {
+  //   return res.status(403).json({ message: "External requests not allowed" });
+  // }
 
   const area = req.body.area;
   const time = req.body.time;
