@@ -50,6 +50,7 @@ const home = () => {
         setRows(result.rows);
       }
       setLoading(false);
+      console.log(result.host);
     };
 
     getData();
