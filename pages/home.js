@@ -43,9 +43,12 @@ const home = () => {
       });
 
       result = await temp.json();
-      console.log(result.host);
       setTotal(result.length);
-      setRows(result.rows);
+      if (result.length == 0) {
+        setRows([]);
+      } else {
+        setRows(result.rows);
+      }
       setLoading(false);
     };
 
@@ -104,7 +107,11 @@ const home = () => {
                 </tr>
               </thead>
               {loading ? (
-                <div className="">Loading ... </div>
+                <tbody className="tableBody">
+                  <tr className="tableBodyDataRow">
+                    <td className="tableBodyData">Loading ...</td>
+                  </tr>
+                </tbody>
               ) : (
                 <tbody className="tableBody">
                   {rows.map((doc, index) => {

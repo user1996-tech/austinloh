@@ -16,7 +16,6 @@ const login = ({}) => {
   // const [loading, setLoading] = useState(false)
   const onSubmit = async (event) => {
     event.preventDefault();
-    console.log("submit -> ", email, password);
 
     if (password == "") {
       toast.error("Password cannot be empty !");

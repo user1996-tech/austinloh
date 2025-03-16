@@ -56,7 +56,6 @@ export const buildRegions = [
 ];
 
 export const addVisitEntry = async (collection) => {
-  console.log("running addVisitEntry");
   await fetch("/api/addVisitEntry", {
     method: "POST",
     headers: {
