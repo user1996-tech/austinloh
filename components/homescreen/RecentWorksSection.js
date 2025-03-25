@@ -47,26 +47,6 @@ const Recentworks = ({ recentworksRef }) => {
         />
 
         <WorkItem
-          collection="C88"
-          image="/works/5.png"
-          label="MMA Gym Website Redesign"
-          url={links.extc88}
-          techs={[
-            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
-            { alt: "React.js", image: "/logos/react.png", url: "" },
-            {
-              alt: "tailwindcss",
-              image: "/logos/tailwindcss2.png",
-              url: "https://tailwindcss.com/",
-            },
-            { alt: "Github", image: "/logos/github.png", url: "" },
-          ]}
-          texts={[
-            "Expanding from an existing design our focus was to improve the Mobile experience for our customers where most of our online traffic was coming from. Our main focus was to accurately represent the world class standards of our gym with our online presence.",
-          ]}
-        />
-
-        <WorkItemReverse
           collection="ChatWithAnyone"
           image="/works/6.png"
           label="Chat With Anyone App"
@@ -92,6 +72,26 @@ const Recentworks = ({ recentworksRef }) => {
           ]}
           texts={[
             " Multilingual messaging platform breaking down language barriers by letting users chat naturally in their native tongue while AI translation seamlessly converts messages to each recipient's preferred language. This innovative solution enables truly global communication without language limitations, allowing diverse teams and international friends to connect effortlessly in real-time.",
+          ]}
+        />
+
+        <WorkItemReverse
+          collection="C88"
+          image="/works/5.png"
+          label="MMA Gym Website Redesign"
+          url={links.extc88}
+          techs={[
+            { alt: "Next.js", image: "/logos/nextjs.png", url: "" },
+            { alt: "React.js", image: "/logos/react.png", url: "" },
+            {
+              alt: "tailwindcss",
+              image: "/logos/tailwindcss2.png",
+              url: "https://tailwindcss.com/",
+            },
+            { alt: "Github", image: "/logos/github.png", url: "" },
+          ]}
+          texts={[
+            "Expanding from an existing design our focus was to improve the Mobile experience for our customers where most of our online traffic was coming from. Our main focus was to accurately represent the world class standards of our gym with our online presence.",
           ]}
         />
 

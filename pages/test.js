@@ -21,6 +21,7 @@ const test = () => {
   return (
     <div className="w-full h-min-screen">
       <div className="w-full max-w-6xl mx-auto flex flex-col justify-center items-center">
+        <p>Some title here</p>
         {items.map((item, index) => {
           return (
             <div className="w-full flex" key={index} id="item">
@@ -37,6 +38,7 @@ const test = () => {
           );
         })}
       </div>
+      <div className="">Some button here</div>
     </div>
   );
 };
