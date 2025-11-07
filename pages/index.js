@@ -96,6 +96,10 @@ export default function Home() {
     <div>
       <Head>
         <title>Austin Loh</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <meta property="og:title" content="Austin Loh" key="title" />
         <meta property="og:image" content="/og.jpg" key="image" />
         <meta
